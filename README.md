@@ -1,4 +1,4 @@
-# [https://kiryu-kai.github.io/]
+# <https://kiryu-kai.github.io/>
 
 桐生会本部のトップページ。
 
