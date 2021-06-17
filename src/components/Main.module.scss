@@ -32,6 +32,13 @@
   max-width: 40vw;
   height: auto;
   margin: 0 auto;
+  opacity: 0;
+  transition: 2s opacity ease-out .3s;
+  aspect-ratio: 1 / 1;
+
+  &[data-state="loaded"] {
+    opacity: 1;
+  }
 }
 
 .lede {
