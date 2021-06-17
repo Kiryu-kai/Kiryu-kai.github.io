@@ -1,0 +1,15 @@
+.video {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  max-width: 100%;
+  margin: auto;
+  opacity: 0;
+  transition: 5s opacity ease-out;
+  transform: translateX(-50%);
+
+  &[data-state="loaded"] {
+    opacity: 1;
+  }
+}

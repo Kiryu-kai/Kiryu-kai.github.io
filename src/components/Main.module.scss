@@ -12,32 +12,25 @@
   }
 }
 
-.video {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  z-index: -1;
-  max-width: 100%;
-  margin: auto;
-  transform: translateX(-50%);
-}
-
 .h1 {
-  margin: 0 0 40px;
-}
-
-.logo {
-  display: block;
-  width: 450px;
-  max-width: 40vw;
-  height: auto;
-  margin: 0 auto;
-}
-
-.lede {
   text-align: center;
 
-  &__inner {
+  &__logo {
+    display: block;
+    width: 450px;
+    max-width: 40vw;
+    height: auto;
+    margin: 0 auto 40px;
+    opacity: 0;
+    transition: 2s opacity ease-out .3s;
+    aspect-ratio: 1 / 1;
+
+    &[data-state="loaded"] {
+      opacity: 1;
+    }
+  }
+
+  &__txt {
     font-family: serif;
     font-size: 30px;
   }
