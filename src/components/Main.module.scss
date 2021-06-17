@@ -1,0 +1,44 @@
+@use "../utils/mixin.scss" as *;
+
+.main {
+  position: relative;
+  grid-row: 2 / 3;
+  padding: 20vh 20px;
+  overflow: hidden;
+
+  @include min-screen() {
+    padding-top: 5vw;
+    padding-bottom: 60px;
+  }
+}
+
+.video {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  max-width: 100%;
+  margin: auto;
+  transform: translateX(-50%);
+}
+
+.h1 {
+  margin: 0 0 40px;
+}
+
+.logo {
+  display: block;
+  width: 450px;
+  max-width: 40vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.lede {
+  text-align: center;
+
+  &__inner {
+    font-family: serif;
+    font-size: 30px;
+  }
+}
