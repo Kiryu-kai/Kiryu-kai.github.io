@@ -17,6 +17,10 @@
 
 ## 本プロジェクトはTypeScriptベースのReactを採用しています。
 
+デプロイは、mainブランチに対して立てられたPRがマージされた時、CIによって行われます。
+
+gh-pagesブランチに[gh-pages](https://www.npmjs.com/package/gh-pages)を利用してコミットされたものがデプロイされる構成になっています。
+
 以下、デフォルトのREADME.md。
 
 ### Available Scripts
