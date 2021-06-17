@@ -3,9 +3,9 @@ import styles from './GlobalNav.module.scss';
 
 function GlobalNav() {
   const [isExpanded, toggleExpanded] = useState<'true' | 'false'>('false');
+  /** グロナビと展開させるためのボタン用ハンドラ */
   const onClick = () => {
     toggleExpanded(isExpanded === 'true' ? 'false' : 'true');
-
   };
 
   return (

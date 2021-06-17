@@ -4,6 +4,7 @@ import styles from './BackgroundVideo.module.scss';
 function App() {
   const [loop, setLoop] = useState(false);
   const [loadState, setLoadState] = useState('wait');
+  /** 動画が読み込み終わって自動再生が始まった時にフェードインさせるためのハンドラ */
   const onPlay = function () {
     setLoadState('loaded');
   };

@@ -4,6 +4,7 @@ import BackgroundVideo from './BackgroundVideo';
 
 function Main() {
   const [loadState, setLoadState] = useState('wait');
+  /** 代紋が読み込み終わった時にフェードインさせるためのハンドラ */
   const logoOnLoad = function () {
     setLoadState('loaded');
   };
