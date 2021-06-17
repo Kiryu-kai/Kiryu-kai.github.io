@@ -1,16 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styles from './Main.module.scss';
+import BackgroundVideo from './BackgroundVideo';
 
-function App() {
-  const [loop, setLoop] = useState(false);
-
-  // ユーザが動きの効果を減らす設定にしている場合は、動画をループ再生させない
-  useEffect(() => {
-    const isNoReduce = !(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-
-    setLoop(isNoReduce);
-  }, []);
-
+function Main() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>
@@ -23,11 +15,9 @@ function App() {
         </b>
       </p>
 
-      <video className={styles.video} tabIndex={-1} autoPlay loop={loop} muted>
-        <source src="./video/nc176637.mp4" type='video/mp4' />
-      </video>
+      <BackgroundVideo />
     </main>
   );
 }
 
-export default App;
+export default Main;
