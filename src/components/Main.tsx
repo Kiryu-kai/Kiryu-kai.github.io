@@ -11,14 +11,14 @@ function Main() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>
-        <img className={styles.logo} src="./image/logo.png" data-state={loadState} onLoad={logoOnLoad} alt="桐生会" width={900} height={900} />
-      </h1>
+        <span className={styles.h1__symbol}>
+          <img className={styles.h1__logo} src="./image/logo.png" data-state={loadState} onLoad={logoOnLoad} alt="" width={900} height={900} />
+        </span>
 
-      <p className={styles.lede}>
-        <b className={styles.lede__inner}>
+        <span className={styles.h1__txt}>
           ホロライブ直系 桐生会
-        </b>
-      </p>
+        </span>
+      </h1>
 
       <BackgroundVideo />
     </main>
