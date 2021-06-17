@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - uses: borales/actions-yarn@v1.22.10
+      - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
-      - uses: borales/actions-yarn@v1.22.10
+      - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: deploy
