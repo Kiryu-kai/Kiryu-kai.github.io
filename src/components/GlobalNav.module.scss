@@ -1,0 +1,128 @@
+@use "../utils/mixin.scss" as *;
+
+.btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+
+  &::before,
+  &::after,
+  &__label::before,
+  &__label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    margin: auto;
+    content: "";
+    background: #fff;
+  }
+
+  &::before,
+  &::after {
+    transition: .2s opacity ease-out;
+  }
+
+  &::before {
+    transform: translateY(-10px);
+  }
+
+  &::after {
+    transform: translateY(10px);
+  }
+
+  &__label {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      transition: .2s transform ease-out;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    &::before,
+    &::after {
+      opacity: 0;
+    }
+
+    .btn__label::before {
+      transform: rotate(45deg);
+    }
+
+    .btn__label::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 260px;
+  height: 100%;
+  overflow: hidden;
+  text-align: right;
+
+  &__inner {
+    height: 100%;
+    padding: 70px 10px 30px;
+    overflow: auto;
+    visibility: visible;
+    background: rgba(0, 0, 0, .8);
+    transition: .2s opacity ease-out, .2s visibility ease-out, .2s transform ease-out;
+    transform: translateX(0);
+  }
+
+  &[hidden] {
+    display: block;
+
+    .nav__inner {
+      visibility: hidden;
+      opacity: 0;
+
+      transform: translateX(100%);
+    }
+  }
+
+  &__ul {
+    padding: 0;
+    margin: 15px 0 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @include min-screen() {
+    &__item {
+      display: block;
+
+      &[href] {
+        transition: .2s background-color ease-out;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(255, 255, 255, .2);
+        }
+      }
+    }
+  }
+}
