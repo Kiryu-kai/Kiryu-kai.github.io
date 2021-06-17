@@ -16,4 +16,4 @@ jobs:
           cmd: install --ignore-engines # TODO: 根本的に解決する方法を確認する
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: deploy
+          cmd: deploy --ignore-engines # TODO: 根本的に解決する方法を確認する
