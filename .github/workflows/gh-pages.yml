@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: user config
-      run: |
-        git config user.name heppokofrontend
-        git config user.email heppokofrontend@gmail.com
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
     - name: Install dependencies
       run: yarn --frozen-lockfile
-    - name: deploy
-      run: yarn deploy
+    - name: Deploy with gh-pages
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
