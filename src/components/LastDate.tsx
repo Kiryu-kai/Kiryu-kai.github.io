@@ -8,7 +8,7 @@ function LastDate() {
   const endDate = new Date('2521-07-01 00:00:00').getTime();
   /** カウントダウン */
   const loop = () => {
-    const now = new Date().getTime();
+    const now = Date.now();
     let diff = new Date(endDate - now).getTime();
 
     // 500年経ってない
