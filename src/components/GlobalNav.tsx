@@ -19,7 +19,7 @@ function GlobalNav() {
           <div className={styles.nav__scroll}>
             <ul className={styles.nav__ul}>
               <li className={styles.nav__li}>
-                <a href="./" className={styles.nav__item}>準備中</a>
+                <a href="./" className={styles.nav__item}>桐生会から桐生会へ</a>
                 <a href="./" className={styles.nav__item}>準備中</a>
                 <a href="./" className={styles.nav__item}>準備中</a>
                 <a href="./" className={styles.nav__item}>準備中</a>
