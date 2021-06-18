@@ -4,8 +4,8 @@ import styles from './LastDate.module.scss';
 function LastDate() {
   const [label, setLabel] = useState('約束の日まであと、');
   const [lastDate, setLastDate] = useState('');
-  /** 会長のお戻り 2521年7月1日 */
-  const endDate = new Date(2521, 6, 1, 0, 0, 0, 0).getTime();
+  /** 会長のお戻り 2021年7月1日17時59分にBoothが終了したことから。 */
+  const endDate = new Date(2521, 6, 1, 18, 0, 0, 0).getTime();
   /** カウントダウン */
   const loop = () => {
     const now = Date.now();
