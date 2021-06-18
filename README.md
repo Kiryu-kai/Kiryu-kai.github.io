@@ -3,15 +3,9 @@
 桐生会本部のトップページ。
 
 各ページへの導線を並べる想定です。ルートディレクトリを除いた各階層は、別リポジトリでメンテナンスします。
-## Contributing
 
-ブランチ管理モデルにGitHub Flowを採用しています。
-
-- このプロジェクトをforkしてください
-- featureブランチを切ってください：`git switch -c my-new-feature`
-- あなたのローカルブランチで変更点をコミットしてください：`git commit -am 'Add some feature'`
-- あなたのリモートリポジトリにブランチをプッシュしてください：`git push origin my-new-feature`
-- このリポジトリにプルリクエストを送ってください :^)
+- [CONTRIBUTING](CONTRIBUTING.md)
+- [FOR_DEVELOPER](FOR_DEVELOPER.md)
 
 ## 本プロジェクトはTypeScriptベースのReactを採用しています。
 
