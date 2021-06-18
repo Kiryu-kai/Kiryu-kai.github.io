@@ -7,7 +7,7 @@
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 2;
+  z-index: 1;
   width: 50px;
   height: 50px;
   padding: 0;
@@ -56,6 +56,8 @@
   }
 
   &[aria-expanded="true"] {
+    z-index: 4;
+
     &::before,
     &::after {
       opacity: 0;
@@ -75,26 +77,33 @@
  * グローバルナビゲーション
  * ========================================================================== */
 .nav {
-  position: absolute;
+  position: fixed;
+  top: 0;
   right: 0;
-  z-index: 1;
-  width: 260px;
+  z-index: 3;
   height: 100%;
   overflow: hidden;
   text-align: right;
 
   &__inner {
+    width: 260px;
     height: 100%;
-    padding: 70px 10px 30px;
-    overflow: auto;
+    padding: 70px 0 0;
     visibility: visible;
     background: rgba(0, 0, 0, .8);
     transition: .2s opacity ease-out, .2s visibility ease-out, .2s transform ease-out;
     transform: translateX(0);
   }
 
+  &__scroll {
+    height: 100%;
+    padding: 0 20px 30px;
+    overflow: auto;
+  }
+
   &[hidden] {
     display: block;
+    pointer-events: none;
 
     .nav__inner {
       visibility: hidden;
