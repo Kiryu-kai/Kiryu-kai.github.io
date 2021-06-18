@@ -5,7 +5,7 @@ function LastDate() {
   const [label, setLabel] = useState('約束の日まであと、');
   const [lastDate, setLastDate] = useState('');
   /** 会長のお戻り */
-  const endDate = new Date('2521-07-01 00:00:00').getTime();
+  const endDate = new Date(2521, 6, 1, 0, 0, 0, 0).getTime();
   /** カウントダウン */
   const loop = () => {
     const now = Date.now();
