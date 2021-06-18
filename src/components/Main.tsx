@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from './Main.module.scss';
 import BackgroundVideo from './BackgroundVideo';
 import TextWrap from './TextWrap';
+import LastDate from './LastDate';
 
 function Main() {
   const [loadState, setLoadState] = useState('wait');
@@ -26,6 +27,7 @@ function Main() {
       <p>直系組織100団体、<TextWrap>構成員127万人。</TextWrap></p>
       <p>4代目会長・桐生ココを永遠に語り継ぎ、<TextWrap>推し続けることが我らたつのこの指名。</TextWrap></p>
       <p>500年の時を経て、<TextWrap>再びその名を世界に轟かせむ。</TextWrap></p>
+      <LastDate />
 
       <BackgroundVideo />
     </main>

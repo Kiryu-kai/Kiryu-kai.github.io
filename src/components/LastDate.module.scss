@@ -1,0 +1,11 @@
+@use "../utils/mixin.scss" as *;
+
+
+.lastDate {
+  display: inline-block;
+  font-size: 1.375rem;
+
+  @include min-screen() {
+    font-size: 1.875rem;
+  }
+}
