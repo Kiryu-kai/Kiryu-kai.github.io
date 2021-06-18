@@ -6,12 +6,15 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import reportWebVitals from './reportWebVitals';
+import Container from './components/Container';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Main />
-    <Footer />
+    <Container>
+      <Header />
+      <Main />
+      <Footer />
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
