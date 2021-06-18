@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   return (
-    <video className={styles.video} data-state={loadState} onPlay={onPlay} tabIndex={-1} autoPlay loop={loop} muted>
+    <video className={styles.video} data-state={loadState} onPlay={onPlay} tabIndex={-1} autoPlay loop={loop} muted playsInline>
       <source src="./video/nc176637.mp4" type='video/mp4' />
     </video>
   );
