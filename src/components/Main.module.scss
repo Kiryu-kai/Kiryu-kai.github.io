@@ -3,18 +3,20 @@
 .main {
   position: relative;
   grid-row: 2 / 3;
-  padding: 20vh 20px;
+  max-width: 640px;
+  padding: 74px 20px 36px;
+  margin: 0 auto;
   overflow: hidden;
+  font-family: serif;
+  text-align: center;
 
   @include min-screen() {
-    padding-top: 5vw;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 130px;
   }
 }
 
 .h1 {
-  text-align: center;
-
   &__logo {
     display: block;
     width: 450px;
@@ -31,7 +33,6 @@
   }
 
   &__txt {
-    font-family: serif;
     font-size: 30px;
   }
 }
