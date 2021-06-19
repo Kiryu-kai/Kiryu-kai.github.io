@@ -18,5 +18,5 @@
 |:--|:--|:--|
 |Node.js|必須|バージョンは[.node-version](.node-version)をご確認ください|
 |[yarn](https://classic.yarnpkg.com/en/docs/install)|必須||
-|[Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)|||
+|[Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)||基本的にVS Codeを利用している想定でコミニュケーションをします|
 |EditorConfig|必須|[VS Codeの場合はこちら](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)|
