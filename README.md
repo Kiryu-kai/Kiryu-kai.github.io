@@ -4,8 +4,8 @@
 
 各ページへの導線を並べる想定です。ルートディレクトリを除いた各階層は、別リポジトリでメンテナンスします。
 
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [FOR_DEVELOPER](FOR_DEVELOPER.md)
+- [CONTRIBUTING - このリポジトリへの協力](CONTRIBUTING.md)
+- [FOR_DEVELOPER - 開発者の方へ](FOR_DEVELOPER.md)
 
 ## 本プロジェクトはTypeScriptベースのReactを採用しています。
 
