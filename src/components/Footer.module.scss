@@ -1,4 +1,6 @@
 .wrap {
+  position: sticky;
+  bottom: 0;
   grid-row: 3 / 4;
   padding: 0 20px;
   text-align: right;
@@ -11,7 +13,7 @@
   bottom: 0;
   left: 0;
   z-index: 1;
-  display: grid;
+  display: flex;
   place-items: center;
   padding: 0 20px 40px;
   font-size: 14px;
@@ -55,13 +57,16 @@
   position: relative;
   z-index: 2;
   font-size: 12px;
+
+  a {
+    text-underline-offset: auto;
+  }
 }
 
 .btn {
   padding: 0;
   color: #fff;
   text-decoration: underline;
-  text-underline-offset: 2px;
   background: transparent;
   border: 0;
 }
