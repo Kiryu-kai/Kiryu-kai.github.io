@@ -23,7 +23,7 @@ function Main() {
         </span>
       </h1>
 
-      <p>指定暴力団ホ口ライブ直参、<TextWrap>伝説のげぼかわドラゴン率いる桐生会。</TextWrap></p>
+      <p>指定○○団ホ口ライブ直参、<TextWrap>伝説のげぼかわドラゴン率いる桐生会。</TextWrap></p>
       <p>直系組織100団体、<TextWrap>構成員127万人。</TextWrap></p>
       <p>4代目会長・桐生ココを永遠に語り継ぎ、<TextWrap>推し続けることが我らたつのこの使命。</TextWrap></p>
       <p>500年の時を経て、<TextWrap>再びその名を世界に轟かせむ。</TextWrap></p>
