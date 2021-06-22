@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-  # pull_request: test用のCIはPRのみで実施することにする
-  #   types:
-  #     - opened
-  #     - synchronize
-  #     - reopened
 
 jobs:
   deploy:
