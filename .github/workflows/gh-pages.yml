@@ -1,10 +1,14 @@
 name: github pages
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types: [closed]
+  # pull_request: test用のCIはPRのみで実施することにする
+  #   types:
+  #     - opened
+  #     - synchronize
+  #     - reopened
 
 jobs:
   deploy:
