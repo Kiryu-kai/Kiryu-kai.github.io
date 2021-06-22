@@ -20,7 +20,7 @@ function Footer() {
   return (
     <footer className={styles.wrap}>
       <p className={styles.copyright}>
-        <small>©︎ 2020 Coco Kiryu - <button type="button" className={styles.btn} onClick={onclick}　aria-expanded={isExpanded}>Material</button> - <a href="https://github.com/Kiryu-kai/Kiryu-kai.github.io">Repository</a></small>
+        <small>©︎ 2019 Coco Kiryu - <button type="button" className={styles.btn} onClick={onclick}　aria-expanded={isExpanded}>Material</button> - <a href="https://github.com/Kiryu-kai/Kiryu-kai.github.io">Repository</a></small>
       </p>
 
       <div className={styles.material} hidden={!isExpanded}>
