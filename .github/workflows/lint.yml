@@ -18,5 +18,7 @@ jobs:
         node-version: '14.x'
     - name: Install dependencies
       run: yarn --frozen-lockfile
-    - name: yarn lint
+    - name: lint
       run: yarn lint
+    - name: test
+      run: yarn test
