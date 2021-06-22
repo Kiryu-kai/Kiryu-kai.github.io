@@ -69,7 +69,11 @@
     "postinstall": "husky install",
     "prepare": "husky install",
     "start": "react-scripts start",
-    "stylelint": "stylelint ./src --fix",
-    "test": "react-scripts test"
+    "lint": "yarn eslint && yarn stylelint",
+    "eslint": "eslint ./src",
+    "stylelint": "stylelint ./src",
+    "stylelint:fix": "stylelint ./src --fix",
+    "test": "echo \"no  test files\"",
+    "test:react": "react-scripts test"
   }
 }
