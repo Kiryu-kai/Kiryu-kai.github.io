@@ -1,3 +1,4 @@
+@use "./utils/mixin.scss" as *;
 
 *,
 *::before,
@@ -18,6 +19,14 @@ body {
 a {
   color: inherit;
   text-underline-offset: 2px;
+  cursor: inherit;
+
+  @include min-screen() {
+    &:hover,
+    &:focus {
+      color: #e88b00;
+    }
+  }
 }
 
 small {

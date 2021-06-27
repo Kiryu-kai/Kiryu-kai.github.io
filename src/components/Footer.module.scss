@@ -1,3 +1,5 @@
+@use "../utils/mixin.scss" as *;
+
 .wrap {
   position: sticky;
   bottom: 0;
@@ -70,4 +72,11 @@
   text-decoration: underline;
   background: transparent;
   border: 0;
+
+  @include min-screen() {
+    &:hover,
+    &:focus {
+      color: #e88b00;
+    }
+  }
 }
