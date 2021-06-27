@@ -37,6 +37,9 @@ function Footer() {
 
           <ul className={styles.material__ul}>
             <li className={styles.material__li}>
+              <a href="https://twitter.com/kiryucoco/status/1218277670040956928">桐生ココ🐉 (@kiryucoco) - Twitter</a>
+            </li>
+            <li className={styles.material__li}>
               <a href="https://twitter.com/buff47213168/status/1360166763317526532">buff🐉 (@buff47213168) - Twitter</a>
             </li>
             <li className={styles.material__li}>
