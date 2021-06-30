@@ -22,7 +22,10 @@ function GlobalNav() {
                 <a href="/aphorism/" className={styles.nav__item}>#桐生ココの格言</a>
               </li>
               <li className={styles.nav__li}>
-                <a href="/semi-permanent-contract/" className={styles.nav__item}>桐生会半永久的継続契約書</a>
+                <a href="/semi-permanent-contract/" className={styles.nav__item}>#桐生会半永久的継続契約書</a>
+              </li>
+              <li className={styles.nav__li}>
+                <a href="/for-kiryu-kai/" className={styles.nav__item}>桐生会から桐生会へ</a>
               </li>
             </ul>
           </div>
