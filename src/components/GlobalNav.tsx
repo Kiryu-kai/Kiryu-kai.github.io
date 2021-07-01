@@ -34,7 +34,7 @@ function GlobalNav() {
 
             <ul className={styles.nav__ul}>
               <li className={styles.nav__li}>
-                <a href="https://arigathanks.manotomo.com/home/" className={styles.nav__item} target="_blank" rel="noreferrer">
+                <a href="https://arigathanks.manotomo.com/home" className={styles.nav__item} target="_blank" rel="noreferrer">
                   Thank You Coco
                   <NewIcon />
                 </a>
