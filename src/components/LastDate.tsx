@@ -41,7 +41,7 @@ function LastDate() {
     setDay('');
     setHour('');
     setMin('');
-    setMin('');
+    setSec('');
     setLabel('約束の時は来た。')
     clearInterval(key);
   };
@@ -53,7 +53,7 @@ function LastDate() {
   // それぞれをspan要素で分割します
   return (
     <p>
-      {label}
+      <span>{label}</span>
       <span className={styles.lastDate}>
         <span>{y}</span>
         <span>{d}</span>
