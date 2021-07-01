@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { NewIcon } from './NewIcon'
 import styles from './GlobalNav.module.scss';
 
 function GlobalNav() {
@@ -26,6 +27,17 @@ function GlobalNav() {
               </li>
               <li className={styles.nav__li}>
                 <a href="/for-kiryu-kai/" className={styles.nav__item}>桐生会から桐生会へ</a>
+              </li>
+            </ul>
+
+            <h2 className={styles.nav__hdg}>外部サイト</h2>
+
+            <ul className={styles.nav__ul}>
+              <li className={styles.nav__li}>
+                <a href="https://arigathanks.manotomo.com/home/" className={styles.nav__item} target="_blank" rel="noreferrer">
+                  Thank You Coco
+                  <NewIcon />
+                </a>
               </li>
             </ul>
           </div>

@@ -97,7 +97,7 @@
 
   &__scroll {
     height: 100%;
-    padding: 0 20px 30px;
+    padding: 15px 17px 30px 20px;
     overflow: auto;
   }
 
@@ -113,15 +113,22 @@
     }
   }
 
+  &__hdg {
+    padding: 25px 0 0;
+    margin: 24px 0 0;
+    font-size: 18px;
+    border-top: 1px solid #555;
+  }
+
   &__ul {
     padding: 0;
-    margin: 15px 0 0;
+    margin: 0;
     list-style: none;
   }
 
   &__item {
     display: block;
-    padding: 5px;
+    padding: 5px 8px;
     color: #fff;
     text-decoration: none;
   }
