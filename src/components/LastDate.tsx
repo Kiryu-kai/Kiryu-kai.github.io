@@ -3,7 +3,11 @@ import styles from './LastDate.module.scss';
 
 function LastDate() {
   const [label, setLabel] = useState('約束の日まであと、');
-  const [lastDate, setLastDate] = useState('');
+  const [y, setYear] = useState('');
+  const [d, setDay] = useState('');
+  const [h, setHour] = useState('');
+  const [m, setMin] = useState('');
+  const [s, setSec] = useState('');
   /** 会長のお戻り 2021年7月1日17時59分にBoothが終了したことから。 */
   const endDate = new Date(2521, 6, 1, 18, 0, 0, 0).getTime();
   /** カウントダウン */
@@ -23,13 +27,21 @@ function LastDate() {
       diff = diff % ( 1000 * 60 );
       const sec = String(Math.floor(diff / 1000)).padStart(2, '0');
 
-      setLastDate(`${year ? `${year}年` : ''}${day ? `${day}日` : ''}${hour ? `${String(hour).padStart(2, '0')}時間` : ''}${min ? `${String(min).padStart(2, '0')}分` : ''}${sec}秒。`);
+      setYear(year ? `${year}年` : '')
+      setDay(day ? `${day}日` : '')
+      setHour(hour ? `${String(hour).padStart(2, '0')}時間` : '')
+      setMin(min ? `${String(min).padStart(2, '0')}分` : '')
+      setSec(`${sec}秒。`)
 
       return;
     }
 
     // 500年後
-    setLastDate('');
+    setYear('');
+    setDay('');
+    setHour('');
+    setMin('');
+    setMin('');
     setLabel('約束の時は来た。')
     clearInterval(key);
   };
@@ -37,10 +49,18 @@ function LastDate() {
 
   useEffect(loop);
 
+  // 自動翻訳ユーザは更新される文字列ごとにElement Nodeが別れているほうが助かるので
+  // それぞれをspan要素で分割します
   return (
     <p>
       {label}
-      <span className={styles.lastDate}>{lastDate}</span>
+      <span className={styles.lastDate}>
+        <span>{y}</span>
+        <span>{d}</span>
+        <span>{h}</span>
+        <span>{m}</span>
+        <span>{s}</span>
+      </span>
     </p>
   );
 }
