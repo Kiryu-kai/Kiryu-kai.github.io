@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { NewIcon } from './NewIcon'
+import { TextWrap } from './TextWrap'
 import styles from './GlobalNav.module.scss';
 
 function GlobalNav() {
@@ -36,6 +37,12 @@ function GlobalNav() {
               <li className={styles.nav__li}>
                 <a href="https://arigathanks.manotomo.com/home" className={styles.nav__item} target="_blank" rel="noreferrer">
                   Thank You Coco
+                  <NewIcon />
+                </a>
+              </li>
+              <li className={styles.nav__li}>
+                <a href="https://kiryucoco.jp/ts/" className={styles.nav__item} target="_blank" rel="noreferrer">
+                  桐生会特設サイト - <TextWrap>たつのこセレクション</TextWrap>
                   <NewIcon />
                 </a>
               </li>
