@@ -1,0 +1,9 @@
+
+.icn {
+  display: none;
+  margin: 0 0 -2px 6px;
+
+  [target] & {
+    display: inline-block;
+  }
+}
