@@ -48,6 +48,9 @@ module.exports = {
 
     // tsx
     'jsx-a11y/accessible-emoji': 'off',
+
+    // react
+    'react/prop-types': 'off',
   },
 
   // react
