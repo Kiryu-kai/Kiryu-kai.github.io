@@ -9,6 +9,46 @@ function GlobalNav() {
   const onClick = () => {
     toggleExpanded(isExpanded === 'true' ? 'false' : 'true');
   };
+  const internal = [
+    [
+      '#桐生ココの格言',
+      '/aphorism/',
+    ],
+    [
+      '#桐生会半永久的継続契約書',
+      '/semi-permanent-contract/',
+    ],
+    [
+      '桐生会から桐生会へ',
+      '/for-kiryu-kai/',
+    ],
+  ];
+  const extarnal: [string | JSX.Element, string][] = [
+    [
+      'Thank You Coco',
+      'https://arigathanks.manotomo.com/home',
+    ],
+    [
+      'fxcxbookcom',
+      'https://fxcxbook.com',
+    ],
+    [
+      'あさココ温泉郷',
+      'https://asacoco-hot-spring.com',
+    ],
+    [
+      'あさココ温泉郷',
+      'https://holosite.me/aco/',
+    ],
+    [
+      (
+        <>
+          桐生会特設サイト - <TextWrap>たつのこセレクション</TextWrap>
+        </>
+      ),
+      'https://kiryucoco.jp/ts/',
+    ],
+  ];
 
   return (
     <nav className={styles.wrap}>
@@ -20,32 +60,49 @@ function GlobalNav() {
         <div className={styles.nav__inner}>
           <div className={styles.nav__scroll}>
             <ul className={styles.nav__ul}>
-              <li className={styles.nav__li}>
-                <a href="/aphorism/" className={styles.nav__item}>#桐生ココの格言</a>
-              </li>
-              <li className={styles.nav__li}>
-                <a href="/semi-permanent-contract/" className={styles.nav__item}>#桐生会半永久的継続契約書</a>
-              </li>
-              <li className={styles.nav__li}>
-                <a href="/for-kiryu-kai/" className={styles.nav__item}>桐生会から桐生会へ</a>
-              </li>
+              {
+                internal.map(([title, href]) => (
+                  <li className={styles.nav__li} key={href}>
+                    <a href={href} className={styles.nav__a}>
+                      <span className={styles.nav__title}>
+                        {title}
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
 
             <h2 className={styles.nav__hdg}>外部サイト</h2>
 
             <ul className={styles.nav__ul}>
-              <li className={styles.nav__li}>
-                <a href="https://arigathanks.manotomo.com/home" className={styles.nav__item} target="_blank" rel="noreferrer">
-                  Thank You Coco
-                  <NewIcon />
-                </a>
-              </li>
-              <li className={styles.nav__li}>
-                <a href="https://kiryucoco.jp/ts/" className={styles.nav__item} target="_blank" rel="noreferrer">
-                  桐生会特設サイト - <TextWrap>たつのこセレクション</TextWrap>
-                  <NewIcon />
-                </a>
-              </li>
+              {
+                extarnal.sort((a, b) => {
+                  const t = typeof a[0] === 'string' ? a[0] : a[0].props.children[0];
+
+                  if (t > b[1]) {
+                    return 1;
+                  }
+
+                  if (t < b[1]) {
+                    return -1;
+                  }
+
+                  return 0;
+                }).map(([title, href]) => (
+                  <li className={styles.nav__li} key={href.toString()}>
+                    <a href={href} className={styles.nav__a} target="_blank" rel="noreferrer">
+                      <span className={styles.nav__title}>
+                        {title}
+                        <NewIcon />
+                      </span>
+                      <span className={styles.nav__url}>
+                        {href}
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>

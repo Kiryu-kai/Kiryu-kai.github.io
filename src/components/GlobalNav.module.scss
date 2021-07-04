@@ -115,7 +115,7 @@
 
   &__hdg {
     padding: 25px 0 0;
-    margin: 24px 0 0;
+    margin: 24px 0 10px;
     font-size: 18px;
     border-top: 1px solid #555;
   }
@@ -126,15 +126,31 @@
     list-style: none;
   }
 
-  &__item {
+  &__li {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__a {
     display: block;
     padding: 5px 8px;
+    line-height: 1;
     color: #fff;
     text-decoration: none;
   }
 
+  &__title {
+    line-height: 1.6;
+  }
+
+  &__url {
+    font-size: 10px;
+    opacity: .5;
+  }
+
   @include min-screen() {
-    &__item {
+    &__a {
       display: block;
 
       &[href] {
