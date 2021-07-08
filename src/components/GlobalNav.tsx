@@ -11,6 +11,10 @@ function GlobalNav() {
   };
   const internal = [
     [
+      'あさココLIVEジェネレーター',
+      '/asacoco-gen/',
+    ],
+    [
       '#桐生ココの格言',
       '/aphorism/',
     ],
