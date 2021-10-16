@@ -1,6 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import styles from './LastDate.module.scss';
 
+/**
+ * * 4で割り切れる年はうるう年
+ * * 100で割り切れて、400で割り切れない年はうるう年ではない
+ * @param num - 年数
+ * @returns - うるう年かどうか
+ */
+const isLeapYeah = (num: number) => (
+  num % 4 === 0 &&
+  !(
+    num % 100 === 0 &&
+    num % 400 !== 0
+  )
+);
+
 function LastDate() {
   const [label, setLabel] = useState('約束の日まであと、');
   const [y, setYear] = useState('');
@@ -9,11 +23,27 @@ function LastDate() {
   const [m, setMin] = useState('');
   const [s, setSec] = useState('');
   /** 会長のお戻り 2021年7月1日17時59分にBoothが終了したことから。 */
-  const endDate = new Date(2521, 6, 1, 18, 0, 0, 0).getTime();
+  const end = new Date(2521, 6, 1, 18, 0, 0, 0);
+  const endYear = end.getFullYear();
+  const endTimestamp = end.getTime();
   /** カウントダウン */
   const loop = () => {
-    const now = Date.now();
-    let diff = new Date(endDate - now).getTime();
+    const now = new Date();
+    const nowYeah = now.getFullYear();
+    let diff = endTimestamp - now.getTime();
+
+    {
+      let leapDay = 0;
+      const max = end.getFullYear() - nowYeah;
+
+      for (let i = 0; i < max; i++) {
+        if (isLeapYeah(endYear - i)) {
+          leapDay++;
+        }
+      }
+
+      diff -= leapDay * 24 * 60 * 60 * 1000;
+    }
 
     // 500年経ってない
     if (0 <= diff) {
